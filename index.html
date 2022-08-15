@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./world_earth.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <meta name="theme-color" content="#006400">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <title>Code Hack</title>
+</head>
+<body>
+    <div id="wave">
+        <h1>Code Hack</h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#wave",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xffdb,
+        backgroundColor: 0x0,
+        points: 20.00,
+        maxDistance: 19.00,
+        spacing: 10.00
+      })
+    </script>
+
+   <div class="padding-div"></div>
+
+   <div class="width">
+    <h2>What is Code Hack</h2>
+    <p>
+      Code Hack is a term I coined in an attempt to programmatically express little ideas that make life a little more convenient.
+      The following is a list of ideas that make life a little more convenient. Make full use of them!
+     </p>
+     <large class="large">Code 1</large>
+     <h2>The Sound Wave Graph</h2>
+     <p class="p-content">Programming language used</p>
+     <div class="icon-div">
+      <i class="fa-brands fa-python fa-3x icon"></i>
+     </div>
+     <p class="p-content">
+      Occasionally needed code hack that can easily draw audio waveforms.
+     </p>
+     <h3>Install packages</h3>
+     <pre>
+      <code>
+        pip install matplotlib
+        pip install librosa
+      </code>
+     </pre>
+     <h3>python code</h3>
+     <pre>
+      <code class="python">
+        import librosa
+        import librosa.display
+        import matplotlib.pyplot as plt
+
+        a, sr = librosa.load('C:/Users/admin/Downloads/sound-wave-plot-main/sound-wave-plot-main/sample.wav')
+        librosa.display.waveshow(a, sr=sr)
+
+
+        #Giving a title
+        plt.title("sample.wav", style = "italic", fontweight = "bold", color = "black", fontsize = 20)
+        #Giving a label
+        plt.xlabel("time", color = "black", fontsize = 15)
+        plt.ylabel("A", color = "black", fontsize = 15)
+        #Adjusting a scale width
+        #plt.xlim( , )
+        plt.ylim(-0.6, 0.6)
+        #Giving squares
+        #plt.grid()
+        #Giving detail squares
+        #plt.minorticks_on()
+
+        #Displaying a Graph
+        plt.show()
+      </code>
+     </pre>
+     <h3>Result</h3>
+     <div class="img_div">
+      <img id="Outline_img" src="./wave.png">
+    </div>
+
+
+    <large class="large">Code 2</large>
+    <h2>3D Scatter Diagram</h2>
+    <p class="p-content">Programming language used</p>
+    <div class="icon-div">
+      <i class="fa-brands fa-r-project fa-3x icon"></i>
+    </div>
+    <p class="p-content">
+      A code hack to use when you want to write a 3-dimensional graph but wonder if it would be easy to do so.
+    </p>
+    <h3>Install packages</h3>
+    <pre>
+     <code>
+      #install a package
+      install.packages(&quot;rgl&quot;)
+      library(&quot;rgl&quot;)
+
+      # rnorm(number, average, variance)
+      a &lt;-rnorm(10000, 100, 10)
+      b &lt;-rnorm(10000, 100, 10)
+      c &lt;-rnorm(10000, 100, 10)
+
+      df &lt;-data.frame(&quot;a&quot;=a, &quot;b&quot;=b, &quot;c&quot;=c)
+
+      #This is a type h plot.
+      plot3d(df[c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)], type=&quot;h&quot;, xlab=&quot;X&quot;, ylab=&quot;Y&quot;, zlab=&quot;Z&quot;, col = rainbow(3))
+      #This is a type p plot.
+      plot3d(df[c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)], type=&quot;p&quot;, xlab=&quot;X&quot;, ylab=&quot;Y&quot;, zlab=&quot;Z&quot;, col = rainbow(3))
+     </code>
+    </pre>
+    <h3>Result (Type h)</h3>
+    <div class="img_div">
+     <img id="Outline_img" src="./3Dplot_h.webp">
+   </div>
+   <h3>Result (Type p)</h3>
+   <div class="img_div">
+    <img id="Outline_img" src="./3Dplot.webp">
+  </div>
+
+  <large class="large">Code 3</large>
+  <h2>Power Point Slider</h2>
+  <p class="p-content">Programming language used</p>
+  <div class="icon-div">
+   <i class="fa-brands fa-html5 fa-3x icon fa-fw"></i>
+   <br>
+   <i class="fa-brands fa-css3-alt fa-3x icon fa-fw"></i>
+   <br>
+   <i class="fa-brands fa-js fa-3x icon fa-fw"></i>
+  </div>
+  <p class="p-content">
+   Occasionally needed code hack that can easily draw audio waveforms.
+  </p>
+  <div class="a-div">
+    <a href="./OpenFOAM.html" target="_blank"  rel="noopener noreferrer"></a>
+  </div>
+  <h3>HTML</h3>
+  <pre>
+   <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;PowerPoint Slider&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;swiper-container vertical-slider&quot;&gt;
+      &lt;div class=&quot;swiper-wrapper vertical-slider__wrapper&quot;&gt;
+          &lt;!--Insert slide additional parts below this.--&gt;
+          &lt;!--PNG to Slide 15.PNG are inserted in advance.--&gt;
+
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド1.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド2.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド3.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド4.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド5.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド6.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド7.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド8.PNG&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+            &lt;img class=&quot;slide&quot; src=&quot;img/スライド9.PNG&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+        &lt;img class=&quot;slide&quot; src=&quot;img/スライド10.PNG&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+        &lt;img class=&quot;slide&quot; src=&quot;img/スライド11.PNG&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+        &lt;img class=&quot;slide&quot; src=&quot;img/スライド12.PNG&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+        &lt;img class=&quot;slide&quot; src=&quot;img/スライド13.PNG&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+        &lt;img class=&quot;slide&quot; src=&quot;img/スライド14.PNG&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;swiper-slide vertical-slider__slide&quot;&gt;
+        &lt;img class=&quot;slide&quot; src=&quot;img/スライド15.PNG&quot;&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;!--Insert additional slide parts above this.--&gt;
+      &lt;div class=&quot;swiper-pagination vertical-slider__pagination&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code>
+  </pre>
+  <h3>CSS</h3>
+  <pre>
+   <code>
+    .container {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .container::-webkit-scrollbar {  
+    display: none;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .vertical-slider {
+      width: 100%;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+    .vertical-slider__slide {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      color: #fff;
+    }
+    .vertical-slider__slide:nth-child(6n) {
+      background-color: #fa5457;
+    }
+    .vertical-slider__slide:nth-child(6n+1) {
+      background-color: #fa8925;
+    }
+    .vertical-slider__slide:nth-child(6n+2) {
+      background-color: #f6d51f;
+    }
+    .vertical-slider__slide:nth-child(6n+3) {
+      background-color: #01b4bc;
+    }
+    .vertical-slider__slide:nth-child(6n+4) {
+      background-color: #5fa55a;
+    }
+    .vertical-slider__slide:nth-child(6n+5) {
+        background-color: pink;
+    }
+    @media (max-width: 599px) {
+      .vertical-slider__slide {
+        font-size: 16vw;
+      }
+    }
+    @media screen and (max-width: 1349px) {
+      .slide {
+        width: 100vw;
+        height: auto;
+      }
+    }
+    @media screen and (min-width:1350px) and (max-width: 1500px) {
+      .slide {
+        width: auto;
+        height: auto;
+      }
+    }
+    @media screen and (min-width:1501px) {
+      .slide {
+        width: auto;
+        height: 100vh;
+      }
+    }
+   </code>
+  </pre>
+  <h3>JavaScript</h3>
+  <pre>
+   <code>
+    /*  Get height of 100vh excluding address bar/toolbar */
+    function setHeight() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty(&quot;--vh&quot;, `${vh}px`);
+    }
+    setHeight();
+    window.addEventListener(&quot;resize&quot;, setHeight);
+    
+    /* Slider Settings */
+    const verticalSlider = new Swiper(&quot;.vertical-slider&quot;, {
+      direction: &quot;vertical&quot;,
+      slidesPerView: 2,
+      speed: 600,
+      mousewheel: true,
+      SimulateTouch: true,
+      grabCursor: true,
+      breakpoints: {
+        // when window width is &lt;= 320px
+        550: {
+          slidesPerView: 1,
+        }
+      },
+      pagination: {
+        el: &quot;.vertical-slider__pagination&quot;,
+        type: &quot;bullets&quot;,
+        clickable: true,
+      },
+    });
+   </code>
+  </pre>
+
+  <large class="large">Code 4</large>
+  <h2>Variable Division Box</h2>
+  <p class="p-content">Programming language used</p>
+  <div class="icon-div">
+    <i class="fa-brands fa-html5 fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-css3-alt fa-3x icon fa-fw"></i>
+   </div>
+  <p class="p-content">
+    A html snippet that can be used for other purposes than
+  </p>
+  <h3>HTML</h3>
+  <pre>
+   <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./style.css&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;ul&gt;
+            &lt;li class=&quot;li_top&quot;&gt;
+                &lt;div class=&quot;rotate&quot;&gt;
+                    &lt;span&gt;C&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;a&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;r&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;d&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;1&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;li_not_top&quot;&gt;
+                &lt;div class=&quot;rotate&quot;&gt;
+                    &lt;span&gt;C&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;a&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;r&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;d&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;2&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;li_not_top&quot;&gt;
+                &lt;div class=&quot;rotate&quot;&gt;
+                    &lt;span&gt;C&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;a&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;r&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;d&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;3&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;li_not_top&quot;&gt;
+                &lt;div class=&quot;rotate&quot;&gt;
+                    &lt;span&gt;C&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;a&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;r&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;d&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;4&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;li_not_top&quot;&gt;
+                &lt;div class=&quot;rotate&quot;&gt;
+                    &lt;span&gt;C&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;a&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;r&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;d&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;5&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;li_not_top&quot;&gt;
+                &lt;div class=&quot;rotate&quot;&gt;
+                    &lt;span&gt;C&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;a&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;r&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;d&lt;/span&gt;
+                    &lt;br&gt;
+                    &lt;span&gt;6&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+   </code>
+  </pre>
+  <h3>CSS</h3>
+  <pre>
+    <code>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .li_top {
+        flex: 99;
+      }
+      .li_not_top {
+        flex: 1;
+      }
+      li {
+        transition: flex 300ms ease-out, color 200ms ease-out;
+        padding-left: 0px;
+        padding-right: 10px;
+        text-align: right;
+        height: 100vh;
+      }
+      
+      li:nth-child(1) {
+        background: #aad5aa;
+      }
+      li:nth-child(1) {
+        background-image: url(./amazon1.webp);
+        background-repeat:  no-repeat;
+        background-position:center;        
+        background-size: cover;
+      }
+      
+      li:nth-child(2) {
+        background: #8dc78d;
+      }
+      li:nth-child(2):hover {
+        background-image: url(./amazon2.webp);
+        background-repeat:  no-repeat;
+        background-position: center;        
+        background-size: cover;
+        background-color:  	#8dc78d;
+      }
+      
+      li:nth-child(3) {
+        background: #72b872;
+      }
+      li:nth-child(3):hover {
+        background-image: url(./amazon3.webp);
+        background-repeat:  no-repeat;
+        background-position: left;        
+        background-size: cover;
+        background-color: #72b872;
+      }
+      
+      li:nth-child(4) {
+        background: #55aa55;
+      }
+      li:nth-child(4):hover {
+        background-image: url(./amazon4.webp);
+        background-repeat:  no-repeat;
+        background-position: left;        
+        background-size: cover;
+        background-color: 	#55aa55;
+      }
+    
+      li:nth-child(5) {
+        background: #478d47;
+      }
+      li:nth-child(5):hover {
+        background-image: url(amazon5.webp);
+        background-repeat:  no-repeat;
+        background-position: left;        
+        background-size: cover;
+        background-color: #478d47;
+      }
+    
+      li:nth-child(6) {
+        background: #387238;
+      }
+      li:nth-child(6):hover {
+        background-image: url(./amazon6.webp);
+        background-repeat:  no-repeat;
+        background-position: left;        
+        background-size: cover;
+        background-color: #387238;
+      }
+    
+      
+      li:hover {
+         flex: 3000;
+         color: rgba(255, 255, 255,0);
+      }
+      div {
+        font-size: 32px;
+      }
+      .rotate span {
+        display: inline-block;
+        transform: rotate(90deg);
+        text-align: left;
+        font-size: 50px;
+        font-family: 'Times New Roman', serif;
+      }
+    </code>
+  </pre>
+
+  <large class="large">Code 5</large>
+  <h2>Easily Update Sites Distributed through GitHub Pages</h2>
+  <p class="p-content">Programming language used</p>
+  <div class="icon-div">
+    <i class="fa-solid fa-terminal fa-2x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-git-alt fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-html5 fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-css3-alt fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-js fa-3x icon fa-fw"></i>
+   </div>
+  <p class="p-content">
+    Wouldn't it be a little more convenient if we could easily update our GitHub page?
+    This code hack is an MS-DOS command to make it happen.
+  </p>
+  <h3>How to use</h3>
+  <p class="p-content">
+    Originally, when updating GitHub Pages, it is necessary to directly rewrite the text of the html file and enter the command to push to GitHub in the Terminal. However, this code hack can change the text in the site by simply launching a batch file, launching a text file, and writing the text in the text file. You can also update the GitHub Repository by simply typing a single word in the batch file as instructed. Such a little useful code hack.
+  </p>
+  <div class="img_div">
+    <img id="Outline_img" src="./github.png">
+  </div>
+  <h3>MS-DOS ＆ Git</h3>
+  <pre>
+    <code>
+      chcp 65001
+      @echo off
+
+      :A
+      set input_strong =
+
+      echo -----------------------------------------------------------------------------------------------
+      echo For edit web contents, type [edit].
+      echo.
+      echo For web updates, type [replace].
+      echo.
+      echo *caution* Make sure you are connected to the Internet when launching this batch file.
+      echo -----------------------------------------------------------------------------------------------
+
+      color b0
+      set /P input_strong="input:"
+      echo %input_strong%
+
+      pause
+
+      if %input_strong%==edit (
+        start sample.txt
+      )
+      if %input_strong%==replace (
+        git add .
+        git commit -m "commit"
+        git push origin master
+      ) else (
+        goto :A
+      )
+
+      exit
+    </code>
+  </pre>
+  <h3>HTML ＆ JavaScript</h3>
+  <pre>
+    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./style.css&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=insertText&gt;&lt;/div&gt;
+&lt;script&gt;
+fetch( &quot;./sample.txt&quot; ).then( res =&gt; res.text() ).then( text =&gt; {
+document.getElementById( &quot;insertText&quot; ).textContent = text;
+} );
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+  </pre>
+  <h3>CSS</h3>
+  <pre>
+    <code>
+      #insertText {
+        white-space: pre;
+        color: blue;
+        font-size: 2em;
+        height: 60px;
+        width: 100%;
+        text-align: center;
+    }
+    </code>
+  </pre>
+  <h3>Textfile</h3>
+  <pre>
+    <code>
+      Hello, World!
+    </code>
+  </pre>
+  </div>
+</body>
+</html>
