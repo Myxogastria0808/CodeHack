@@ -106,7 +106,7 @@
       A code hack to use when you want to write a 3-dimensional graph but wonder if it would be easy to do so.
     </p>
     <h3>Install Packages</h3>
-    <pre>
+    <pre class="r">
      <code>
       #install a package
       install.packages(&quot;rgl&quot;)
@@ -158,7 +158,7 @@
   </div>
   <h3>HTML</h3>
   <pre>
-   <code>
+   <code class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
@@ -233,7 +233,7 @@
   </pre>
   <h3>CSS</h3>
   <pre>
-   <code>
+   <code class="css">
     .container {
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -307,7 +307,7 @@
   </pre>
   <h3>JavaScript</h3>
   <pre>
-   <code>
+   <code class="javascript">
     /*  Get height of 100vh excluding address bar/toolbar */
     function setHeight() {
       let vh = window.innerHeight * 0.01;
@@ -358,7 +358,7 @@
   </div>
   <h3>HTML</h3>
   <pre>
-   <code>
+   <code class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -457,7 +457,7 @@
   </pre>
   <h3>CSS</h3>
   <pre>
-    <code>
+    <code class="css">
       body {
         font-family: sans-serif;
         margin: 0;
@@ -662,7 +662,7 @@ document.getElementById( &quot;insertText&quot; ).textContent = text;
   </pre>
   <h3>CSS</h3>
   <pre>
-    <code>
+    <code class="css">
       #insertText {
         white-space: pre;
         color: blue;
@@ -679,6 +679,120 @@ document.getElementById( &quot;insertText&quot; ).textContent = text;
       Hello, World!
     </code>
   </pre>
+
+
+
+
+
+
+
+
+
+
+
+  <large class="large">Code 6</large>
+  <h2>Static File Delivery Using Heroku Service with Flask</h2>
+  <p class="p-content">Programming language used</p>
+  <div class="icon-div">
+    <i class="fa-solid fa-terminal fa-2x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-git-alt fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-python fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-html5 fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-css3-alt fa-3x icon fa-fw"></i>
+    <br>
+    <i class="fa-brands fa-js fa-3x icon fa-fw"></i>
+   </div>
+  <p class="p-content">
+    I have created a template for delivering static files to heroku with flask.
+  </p>
+  <div class="a-div">
+    <a href="https://github.com/Myxogastria0808/flask-heroku" target="_blank"  rel="noopener noreferrer">GitHub link</a>
+  </div>
+  <h3>Python</h3>
+  <pre>
+    <code class="python">
+from flask import Flask,render_template
+app = Flask(__name__)
+      
+@app.route(&quot;/&quot;)
+def index():
+    return render_template(&quot;index.html&quot;)
+      
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+    </code>
+  </pre>
+  <h3>Procfile</h3>
+  <pre>
+    <code>
+web: gunicorn [App name]:app
+web: gunicorn [App name]:app --log-file=-
+
+    </code>
+  </pre>
+  <h3>runtime.txt</h3>
+  <pre>
+    <code>
+python-3.10.6
+
+    </code>
+  </pre>
+  <h3>requirements.txt</h3>
+  <pre>
+    <code>
+Flask==2.2.2
+gunicorn==20.1.0
+
+    </code>
+  </pre>
+  <h3>heroku CLI ＆ Git (App Create)</h3>
+  <pre>
+    <code>
+heroku login
+heroku create [App name]
+heroku git:remote -a [App name]
+git init
+git add .
+git commit -m "comment"
+heroku git:remote -a [App name]
+git push heroku main
+
+    </code>
+  </pre>
+  <h3>heroku CLI ＆ Git (App Update)</h3>
+  <pre>
+    <code>
+heroku git:remote -a [App name]
+git add .
+git commit -m "comment"
+git push heroku main
+
+    </code>
+  </pre>
+  <h3>Heroku CLI ＆ Git (App Delete)</h3>
+  <pre>
+    <code>
+heroku git:destroy --app [App name] --confirm [App name]
+
+    </code>
+  </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 </body>
 </html>
